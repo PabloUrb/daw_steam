@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+    Ejemplo con login (tienda de juegos online)
 -->
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>DAW Steam</title>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <a href="NewUser.php">Registrarse</a>
     </body>
 </html>
