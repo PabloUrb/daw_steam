@@ -12,7 +12,7 @@
             <input type="submit" value="Registrarse" name="alta">
         </form>
         <?php
-            require_once 'bbdd.php';
+            require_once 'bbdduser.php';
             // Si han pulsado el botón registramos el usuario
             if (isset($_POST["alta"])) {
                 // Recogemos el nombre de usuario
