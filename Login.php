@@ -22,11 +22,16 @@ and open the template in the editor.
             $username = $_POST["user"];
             $pass = $_POST["pass"];
             if(verificarUser($username, $pass)){
-                echo "Usuario correcto";
+                //guardar datos del usuario en variable de sesión
+                session_start();
+                $_SESSION["user"] = $username;
+                //dirigimos al usuario a su homepage
+                header("Location: UserHome.php");
             }else{
                 echo "nombre de usuario o contraseña incorrectos";
             }
         }
         ?>
+        <a href="index.php"></a>
     </body>
 </html>
