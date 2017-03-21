@@ -24,6 +24,7 @@
                 session_start();
                 $_SESSION["user"] = $username;
                 $tipo = getTipoUsuario($username);
+                $_SESSION["type"] = $tipo;
                 if ($tipo == "usuario") {
                     // Dirigimos al usuario a su homePage.
                     header("Location: UserHome.php");
