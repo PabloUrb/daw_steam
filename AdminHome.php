@@ -11,7 +11,18 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+        session_start();
+        // Nos aseguramos de que haya un usuario autentificado
+        if (isset($_SESSION["user"])) {
+            // Cogemos la variable de sesión y saludamos al usuario
+            $username = $_SESSION["user"];
+            echo "<h2>hola $username</h2>";
+            ?>
+            <p><a href="NewUserAdmin.php">Alta de usuarios</a></p
+            <?php
+        } else {
+            echo "No estás autentificado.";
+        }
         ?>
     </body>
 </html>

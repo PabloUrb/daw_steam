@@ -56,10 +56,10 @@ function verificarUser($username, $password) {
 }
 
 // Función que inserta un usuario de tipo usuario
-function insertUser($nusuario, $pass, $email) {
+function insertUser($nusuario, $pass, $email, $tipo) {
     $conexion = conectar("daw_steam");
     $insert = "insert into user values "
-            . "('$nusuario', '$pass', '$email', 'usuario')";
+            . "('$nusuario', '$pass', '$email', '$tipo')";
     if (mysqli_query($conexion, $insert)) {
         echo "<p>Usuario dado de alta</p>";
     } else {

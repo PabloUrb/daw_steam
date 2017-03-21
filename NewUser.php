@@ -25,7 +25,7 @@
                     $pass = $_POST["pass"];
                     $email = $_POST["email"];
                     // Registramos el usuario en la bbdd
-                    insertUser($nusuario, $pass, $email);
+                    insertUser($nusuario, $pass, $email, "usuario");
                 }
             }
         ?>

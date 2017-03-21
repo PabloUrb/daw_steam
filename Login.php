@@ -29,7 +29,7 @@
                     header("Location: UserHome.php");
                 } else if ($tipo == "admin") {
                     // Dirigimos a la página de administrador
-                    // Aún por hacer
+                    header("Location: AdminHome.php");
                 } else { // Aquí no debería entrar nunca
                     echo "Tipo de usuario incorrecto";
                 }
