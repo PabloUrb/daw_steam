@@ -8,6 +8,7 @@
         <title>DAW Steam</title>
     </head>
     <body>
-        <a href="NewUser.php">Registrarse</a>
+        <p><a href="NewUser.php">Registrarse</a></p>
+        <p><a href="Login.php">Login</a></p>
     </body>
 </html>
