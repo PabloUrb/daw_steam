@@ -6,6 +6,28 @@
 
 require_once 'bbdd.php';
 
+// Función que modifica el perfil de un usuario
+function updateUser($username, $pass, $email) {
+    $con = conectar("daw_steam");
+    $update = "update user set password='$pass', email='$email' where username='$username'";
+    if (mysqli_query($con, $update)) {
+        echo "<p>Datos del perfil modificiados</p>";
+    } else {
+        echo mysqli_error($con);
+    }
+    desconectar($con);
+}
+
+
+// Función que devuelve los datos de un usuario pasado como parámetro
+function getUser($username) {
+    $con = conectar("daw_steam");
+    $query = "select * from user where username='$username'";
+    $resultado = mysqli_query($con, $query);
+    desconectar($con);
+    return $resultado;
+}
+
 // Método que devuelve el tipo de un usuario
 function getTipoUsuario($username) {
     $con = conectar("daw_steam");
