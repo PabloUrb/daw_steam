@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Home Page Administrator</title>
     </head>
     <body>
         <?php
@@ -21,6 +21,7 @@ and open the template in the editor.
                 ?>
                 <p><a href="NewUserAdmin.php">Alta de usuarios</a></p>
                 <p><a href="NewGenre.php">Alta de géneros</a></p>
+                <a href="NewGame.php">Alta de juegos</a>
                 <?php
             } else {
                 echo "No eres administrador.";
