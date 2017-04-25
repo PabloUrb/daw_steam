@@ -24,8 +24,10 @@
                     // Recogemos el resto de datos
                     $pass = $_POST["pass"];
                     $email = $_POST["email"];
+                    //ciframos la contraseña antes de insertarla
+                    $passcif=  password_hash($pass, PASSWORD_DEFAULT);
                     // Registramos el usuario en la bbdd
-                    insertUser($nusuario, $pass, $email, "usuario");
+                    insertUser($nusuario, $passcif, $email, "usuario");
                 }
             }
         ?>

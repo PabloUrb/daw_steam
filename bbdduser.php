@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * Fichero para las funciones de la bbdd, tabla user
  */
 
@@ -18,7 +18,6 @@ function updateUser($username, $pass, $email) {
     desconectar($con);
 }
 
-
 // Función que devuelve los datos de un usuario pasado como parámetro
 function getUser($username) {
     $con = conectar("daw_steam");
@@ -29,6 +28,7 @@ function getUser($username) {
 }
 
 // Método que devuelve el tipo de un usuario
+
 function getTipoUsuario($username) {
     $con = conectar("daw_steam");
     $query = "select type from user where username='$username'";
@@ -41,15 +41,22 @@ function getTipoUsuario($username) {
 }
 
 // Función que verifica los datos de un user
-function verificarUser($username, $password) {
+// verificamos con la constraseña cifrada
+function verificarUser($username, $pass) {
     $con = conectar("daw_steam");
-    $query = "select * from user where username='$username' 
-            and password='$password'";
+    $query = "select * from user where username='$username'";
     $resultado = mysqli_query($con, $query);
     $filas = mysqli_num_rows($resultado);
     desconectar($con);
     if ($filas > 0) {
-        return true;
+        //comprobamos que la contraseña es correcta
+        $fila = mysqli_fetch_array($resultado);
+        extract($fila);
+//        if(password_verify($pass, $password)){   
+//        }else{
+//            return true;
+//        }
+        return password_verify($pass, $password);
     } else {    // Este else no hace falta
         return false;
     }
@@ -68,7 +75,6 @@ function insertUser($nusuario, $pass, $email, $tipo) {
     desconectar($conexion);
 }
 
-
 // Función que devuelve true si existe un usuario con el nombre
 // de usuario que se le pasa y false si no existe 
 function existeUsuario($nombre_usuario) {
@@ -86,5 +92,4 @@ function existeUsuario($nombre_usuario) {
     } else {
         return true;
     }
-    
 }

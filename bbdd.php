@@ -2,10 +2,8 @@
 
 // Fichero con conectar y desconectar
 
-
-
 function conectar($database) {
-    $con = mysqli_connect("localhost", "root", "root", $database)
+    $con = mysqli_connect("localhost", "root", "", $database)
             or die("No se ha podido conectar con la BBDD.");
     return $con;
 }

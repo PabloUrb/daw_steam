@@ -5,9 +5,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        
         <title>Login</title>
     </head>
     <body>
+        <div>
         <form action="" method="POST">
             <p>Usuario: <input type="text" name="user"></p>
             <p>Password: <input type="password" name="pass"></p>
@@ -38,6 +40,6 @@
                 echo "Nombre de usuario o contraseña incorrectos";
             }
         }
-        ?>
+        ?></div>
     </body>
 </html>
