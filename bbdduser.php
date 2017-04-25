@@ -1,5 +1,6 @@
 <?php
 
+
 /*
  * Fichero para las funciones de la bbdd, tabla user
  */
@@ -92,4 +93,5 @@ function existeUsuario($nombre_usuario) {
     } else {
         return true;
     }
+
 }

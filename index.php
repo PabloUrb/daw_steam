@@ -5,6 +5,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+    <a href="Login.php"></a>
         <title>DAW Steam</title>
     </head>
     <body>

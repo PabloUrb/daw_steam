@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!--
     Formulario de Login para los usuarios
@@ -43,3 +44,4 @@
         ?></div>
     </body>
 </html>
+

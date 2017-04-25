@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <!-- HomePage del usuario -->
 <html>
     <head>
@@ -19,6 +20,7 @@
         } else {
             echo "No estás autentificado.";
         }
+
         ?>
     </body>
 </html>

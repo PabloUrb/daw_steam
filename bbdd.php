@@ -1,6 +1,9 @@
 <?php
 
+
 // Fichero con conectar y desconectar
+require_once 'bbdd.php';
+
 
 function conectar($database) {
     $con = mysqli_connect("localhost", "root", "", $database)
